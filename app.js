@@ -60,6 +60,8 @@ const verifiedImages = {
   ,'Tracer 9 GT': 'https://cdn1.npcdn.net/images/941db038936e95ab2d241a539a76736e_1772703506.webp?from=jpeg&md5id=1f9a72a09b50fed7cde992033530b7c0&new_height=1000&new_width=1000&size=max&type=1&w=1739589906'
   ,'Ténéré 700 World Raid': 'https://cdpcdn.dx1app.com/products/USA/YA/2026/MC/DUALPURP/TNR_700_WORLD_RAID/50/RAVEN/2000000004.jpg'
   ,'V-Strom 800DE': 'https://cycles.aws-prod.suzuki.com/-/media/project/cycles/images/products/motorcycles/dl800de---v-strom-800de/2026/gallery/dl800dercm5_yu1_diagonal_cgi_2400x1600.png'
+  ,'Diavel V4': 'https://cdpcdn.dx1app.com/products/USA/DU/2026/MC/CRUISER/DIAVEL_V4/50/DUCATI_RED/2000000051.jpg'
+  ,'XDiavel V4': 'https://images5.1000ps.net/images_bikekat/2026/5-Ducati/12996-XDiavel_V4/004-639001912651402860-ducati-xdiavel-v4.jpg?bgcolor=rgba_39_42_44_0&format=webp&height=680&mode=pad&quality=80&scale=both&width=1208'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
