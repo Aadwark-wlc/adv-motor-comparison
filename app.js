@@ -58,6 +58,8 @@ const verifiedImages = {
   ,'Africa Twin Adventure Sports': 'https://powersports.honda.com/motorcycle/adventure/africa-twin/2026/-/media/products/family/africa-twin/trims/trim-main/africa-twin-dct/2026/2026-africa-twin-dct-pearl_white-1505x923.png?imwidth=1024'
   ,'Tracer 7 GT': 'https://images5.1000ps.net/images_bikekat/2026/4-Yamaha/10360-Tracer_7_GT/001-639005337144036542-yamaha-tracer-7-gt.jpg?format=webp&height=566&mode=crop&width=920'
   ,'Tracer 9 GT': 'https://cdn1.npcdn.net/images/941db038936e95ab2d241a539a76736e_1772703506.webp?from=jpeg&md5id=1f9a72a09b50fed7cde992033530b7c0&new_height=1000&new_width=1000&size=max&type=1&w=1739589906'
+  ,'Ténéré 700 World Raid': 'https://cdpcdn.dx1app.com/products/USA/YA/2026/MC/DUALPURP/TNR_700_WORLD_RAID/50/RAVEN/2000000004.jpg'
+  ,'V-Strom 800DE': 'https://cycles.aws-prod.suzuki.com/-/media/project/cycles/images/products/motorcycles/dl800de---v-strom-800de/2026/gallery/dl800dercm5_yu1_diagonal_cgi_2400x1600.png'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
