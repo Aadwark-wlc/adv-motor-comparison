@@ -73,6 +73,8 @@ const verifiedImages = {
   ,'800MT Explore': 'https://cdn.abicart.com/shop/images/209190089-origpic-19c833/10720/art20/h0089/MY2025_800MT-EXPLORE_Gem-Black_Right.jpg'
   ,'TRK 702 X': 'https://images5.1000ps.net/images_bikekat/2026/49-Benelli/11403-TRK_702_X/003-639034795364744320-benelli-trk-702-x.jpg?bgcolor=rgba_39_42_44_0&format=webp&height=1116&mode=pad&quality=80&scale=both&width=1984'
   ,'Enduro Veloce': 'https://cdn.powergo.ca/media/catalog/2025/49/cc0c0699e4aa45b1a4991c24b4aea4f1_81c2a9c412fc4ca7892c0d472e3847cc_1000/2026-mv-agusta-enduro-veloce-0.webp'
+  ,'450MT': 'https://images5.1000ps.net/images_bikekat/2026/177-CFMOTO/12466-450MT/005-639033977416292147-cfmoto-450mt.jpg?bgcolor=rgba_39_42_44_0&format=webp&height=1116&mode=pad&quality=80&scale=both&width=1984'
+  ,'Himalayan 450': 'https://cdn.powergo.ca/media/catalog/2026/6/ee01b14643a94c209e5b67515f3286bf_81c2a9c412fc4ca7892c0d472e3847cc_1000/2026-royal-enfield-himalayan-450-studio-shots-3.webp'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
