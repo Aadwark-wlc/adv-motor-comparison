@@ -49,6 +49,11 @@ const verifiedImages = {
   ,'R 1300 RT': 'https://www.totalmotorcycle.com/wp-content/uploads/2025/04/2026-BMW-R1300RT3.jpg'
   ,'K 1600 GT': 'https://cdpcdn.dx1app.com/products/USA/BM/2026/MC/BMWK/K_1600_GT/50/STYLE_SPORT_-_RACING_BLUE_METALLIC/2000000019.jpg'
   ,'Multistrada V4 Rally': 'https://www.ducati.com/cms-web/upl/2025/10/Multistrada-V4-Rally-MY26-Model-Preview-1050x650.png'
+  ,'R 1300 RS': 'https://cloudfront-us-east-1.images.arcpublishing.com/octane/ZJQBQ7BVFJA67KAW5GTMCYF5S4.jpg'
+  ,'Ninja 1100SX': 'https://www.kawasaki.com/Content/Images/SubBrand/2026-ninja/26ZX1100H_40TBK1DRF3CG_A.png?w=980'
+  ,'Versys 1100 SE': 'https://www.kawasaki.nl/content/dam/products/pim/resource/ver/Resource_325626_26MY_Versys_1100_SE_Tourer_Plus_BU1_Front.jpg'
+  ,'Tiger Sport 660': 'https://ridermagazine.com/wp-content/uploads/2026/01/2026-Triumph-Tiger-Sport-660-Preview-2.jpg'
+  ,'Tiger 900 GT Pro': 'https://images5.1000ps.net/images_bikekat/2026/37-Triumph/9979-Tiger_900_GT_Pro/003-638966362582155504-triumph-tiger-900-gt-pro.jpg?format=webp&height=566&mode=crop&width=920'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
