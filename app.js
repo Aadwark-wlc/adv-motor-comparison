@@ -54,6 +54,8 @@ const verifiedImages = {
   ,'Versys 1100 SE': 'https://www.kawasaki.nl/content/dam/products/pim/resource/ver/Resource_325626_26MY_Versys_1100_SE_Tourer_Plus_BU1_Front.jpg'
   ,'Tiger Sport 660': 'https://ridermagazine.com/wp-content/uploads/2026/01/2026-Triumph-Tiger-Sport-660-Preview-2.jpg'
   ,'Tiger 900 GT Pro': 'https://images5.1000ps.net/images_bikekat/2026/37-Triumph/9979-Tiger_900_GT_Pro/003-638966362582155504-triumph-tiger-900-gt-pro.jpg?format=webp&height=566&mode=crop&width=920'
+  ,'NT1100': 'https://www.motopark.cz/images/0/ceb1d100e0126531/2/honda-nt1100-mt-2026-pearl-hawkseye-blue.png?hash=488245943'
+  ,'Africa Twin Adventure Sports': 'https://powersports.honda.com/motorcycle/adventure/africa-twin/2026/-/media/products/family/africa-twin/trims/trim-main/africa-twin-dct/2026/2026-africa-twin-dct-pearl_white-1505x923.png?imwidth=1024'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
