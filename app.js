@@ -56,6 +56,8 @@ const verifiedImages = {
   ,'Tiger 900 GT Pro': 'https://images5.1000ps.net/images_bikekat/2026/37-Triumph/9979-Tiger_900_GT_Pro/003-638966362582155504-triumph-tiger-900-gt-pro.jpg?format=webp&height=566&mode=crop&width=920'
   ,'NT1100': 'https://www.motopark.cz/images/0/ceb1d100e0126531/2/honda-nt1100-mt-2026-pearl-hawkseye-blue.png?hash=488245943'
   ,'Africa Twin Adventure Sports': 'https://powersports.honda.com/motorcycle/adventure/africa-twin/2026/-/media/products/family/africa-twin/trims/trim-main/africa-twin-dct/2026/2026-africa-twin-dct-pearl_white-1505x923.png?imwidth=1024'
+  ,'Tracer 7 GT': 'https://images5.1000ps.net/images_bikekat/2026/4-Yamaha/10360-Tracer_7_GT/001-639005337144036542-yamaha-tracer-7-gt.jpg?format=webp&height=566&mode=crop&width=920'
+  ,'Tracer 9 GT': 'https://cdn1.npcdn.net/images/941db038936e95ab2d241a539a76736e_1772703506.webp?from=jpeg&md5id=1f9a72a09b50fed7cde992033530b7c0&new_height=1000&new_width=1000&size=max&type=1&w=1739589906'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
