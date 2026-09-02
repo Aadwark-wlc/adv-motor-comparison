@@ -69,6 +69,7 @@ const verifiedImages = {
   ,'V100 Mandello S': 'https://images5.1000ps.net/images_bikekat/2026/28-Moto_Guzzi/11687-V100_Mandello_S/007-639038960693339572-moto-guzzi-v100-mandello-s.jpg?bgcolor=rgba_39_42_44_0&format=webp&height=680&mode=pad&quality=80&scale=both&width=1208'
   ,'Tuareg 660 Rally': 'https://studiocycle.ca/cdn/shop/files/CopyofAprilia_Tuareg-Rally_Lat-dx.jpg?v=1741218245'
   ,'Pan America 1250 Special': 'https://www.harley-davidson.com/ctfasset/5vy1mse9fkav/2JFZHM1vuTo1TyU15tcJzp/63312d77c57c184a666062bc95dc1b8d/2026-pan-america-1250-special-m85lb-motorcycle-03'
+  ,'FTR x R Carbon': 'https://www.indianmotorcycle.fr/fileadmin/templates/model_22/gallery/ftr-r-carbon/1.jpg'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
