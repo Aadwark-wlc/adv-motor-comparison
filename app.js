@@ -48,7 +48,7 @@ const verifiedImages = {
   ,'CRF1100L Africa Twin': 'https://images5.1000ps.net/images_bikekat/2026/2-Honda/9895-CRF1100L_Africa_Twin/017-639040718488019686-honda-crf1100l-africa-twin.jpg'
   ,'R 1300 RT': 'https://www.totalmotorcycle.com/wp-content/uploads/2025/04/2026-BMW-R1300RT3.jpg'
   ,'K 1600 GT': 'https://cdpcdn.dx1app.com/products/USA/BM/2026/MC/BMWK/K_1600_GT/50/STYLE_SPORT_-_RACING_BLUE_METALLIC/2000000019.jpg'
-  ,'Multistrada V4 Rally': 'https://www.ducati.com/cms-web/upl/2025/10/Multistrada-V4-Rally-MY26-Model-Preview-1050x650.png'
+  ,'Multistrada V4 Rally': 'https://mediahouse.ducati.com/wp-content/uploads/2025/11/75c754adeaa911fd80421f04e4935b15-l.jpg'
   ,'R 1300 RS': 'https://cloudfront-us-east-1.images.arcpublishing.com/octane/ZJQBQ7BVFJA67KAW5GTMCYF5S4.jpg'
   ,'Ninja 1100SX': 'https://www.kawasaki.com/Content/Images/SubBrand/2026-ninja/26ZX1100H_40TBK1DRF3CG_A.png?w=980'
   ,'Versys 1100 SE': 'https://www.kawasaki.nl/content/dam/products/pim/resource/ver/Resource_325626_26MY_Versys_1100_SE_Tourer_Plus_BU1_Front.jpg'
