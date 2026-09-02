@@ -64,6 +64,7 @@ const verifiedImages = {
   ,'XDiavel V4': 'https://images5.1000ps.net/images_bikekat/2026/5-Ducati/12996-XDiavel_V4/004-639001912651402860-ducati-xdiavel-v4.jpg?bgcolor=rgba_39_42_44_0&format=webp&height=680&mode=pad&quality=80&scale=both&width=1208'
   ,'GSX-S1000GT+': 'https://www.globalsuzuki.com/motorcycle/smgs/products/2026gsx-s1000gt/img/colors_ph02_big.jpg'
   ,'Tiger Sport 800 Tour': 'https://www.motorrad-bilder.at/thumbs/1984x1116xfarx272a2c00/slideshows/291/023719/Tiger-Sport-800_MY25_Graphite_RHS-Front-Angle.jpg'
+  ,'Tiger 1200 GT Pro': 'https://images5.1000ps.net/images_bikekat/2026/37-Triumph/10919-Tiger_1200_GT_PRO/006-639008758821591412-triumph-tiger-1200-gt-pro.jpg'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
