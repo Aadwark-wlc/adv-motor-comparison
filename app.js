@@ -62,6 +62,8 @@ const verifiedImages = {
   ,'V-Strom 800DE': 'https://cycles.aws-prod.suzuki.com/-/media/project/cycles/images/products/motorcycles/dl800de---v-strom-800de/2026/gallery/dl800dercm5_yu1_diagonal_cgi_2400x1600.png'
   ,'Diavel V4': 'https://cdpcdn.dx1app.com/products/USA/DU/2026/MC/CRUISER/DIAVEL_V4/50/DUCATI_RED/2000000051.jpg'
   ,'XDiavel V4': 'https://images5.1000ps.net/images_bikekat/2026/5-Ducati/12996-XDiavel_V4/004-639001912651402860-ducati-xdiavel-v4.jpg?bgcolor=rgba_39_42_44_0&format=webp&height=680&mode=pad&quality=80&scale=both&width=1208'
+  ,'GSX-S1000GT+': 'https://www.globalsuzuki.com/motorcycle/smgs/products/2026gsx-s1000gt/img/colors_ph02_big.jpg'
+  ,'Tiger Sport 800 Tour': 'https://www.motorrad-bilder.at/thumbs/1984x1116xfarx272a2c00/slideshows/291/023719/Tiger-Sport-800_MY25_Graphite_RHS-Front-Angle.jpg'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
