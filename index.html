@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Compare touring and sport touring motorcycles." />
+    <title>ADV // Touring Motorcycle Comparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav class="topbar">
+        <a class="wordmark" href="#top" aria-label="ADV home"><span>ADV</span><i></i></a>
+        <p>2026 MODEL GUIDE <span>/</span> TOURING MACHINES</p>
+        <button class="nav-action" id="navCompare" type="button">YOUR GARAGE <b>0</b></button>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">01 — SELECT YOUR MACHINE</p>
+          <h1>Built for the<br /><em>long way home.</em></h1>
+          <p class="intro">The 2026 touring and sport touring motorcycles worth putting side by side. Filter the field, choose up to four, then compare what matters.</p>
+        </div>
+        <div class="hero-note"><span>12</span><p>CURATED<br />MACHINES</p></div>
+      </section>
+
+      <section class="explorer" aria-label="Motorcycle catalogue">
+        <div class="filter-row">
+          <div class="brand-filters" id="brandFilters" aria-label="Filter by brand"></div>
+          <label class="sort-control">SORT BY
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="power">Power</option>
+              <option value="weight">Lowest weight</option>
+              <option value="price">Price</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="catalogue-head">
+          <p id="resultCount">ALL MACHINES <span>16</span></p>
+          <p>SELECT UP TO 4 FOR COMPARISON</p>
+        </div>
+        <div class="motor-grid" id="motorGrid"></div>
+      </section>
+    </main>
+
+    <aside class="compare-dock" id="compareDock" aria-live="polite">
+      <div class="dock-summary">
+        <span class="dock-count" id="dockCount">0</span>
+        <div><strong id="dockTitle">Your garage is empty</strong><p id="dockText">Select up to four machines to compare.</p></div>
+      </div>
+      <div class="dock-bikes" id="dockBikes"></div>
+      <div class="dock-actions">
+        <button class="text-button" id="clearSelection" type="button">Clear</button>
+        <button class="compare-button" id="openComparison" type="button" disabled>Compare selected <span>→</span></button>
+      </div>
+    </aside>
+
+    <dialog class="comparison-modal" id="comparisonModal">
+      <div class="modal-header">
+        <div><p class="eyebrow">02 — HEAD TO HEAD</p><h2>Compare machines</h2></div>
+        <button class="close-button" id="closeComparison" type="button" aria-label="Close comparison">×</button>
+      </div>
+      <div class="comparison-wrap" id="comparisonContent"></div>
+    </dialog>
+
+    <template id="emptyTemplate">
+      <div class="empty-state"><p>NO MACHINES FOUND</p><span>Try another brand filter.</span></div>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
