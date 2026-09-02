@@ -70,6 +70,8 @@ const verifiedImages = {
   ,'Tuareg 660 Rally': 'https://studiocycle.ca/cdn/shop/files/CopyofAprilia_Tuareg-Rally_Lat-dx.jpg?v=1741218245'
   ,'Pan America 1250 Special': 'https://www.harley-davidson.com/ctfasset/5vy1mse9fkav/2JFZHM1vuTo1TyU15tcJzp/63312d77c57c184a666062bc95dc1b8d/2026-pan-america-1250-special-m85lb-motorcycle-03'
   ,'FTR x R Carbon': 'https://www.indianmotorcycle.fr/fileadmin/templates/model_22/gallery/ftr-r-carbon/1.jpg'
+  ,'800MT Explore': 'https://cdn.abicart.com/shop/images/209190089-origpic-19c833/10720/art20/h0089/MY2025_800MT-EXPLORE_Gem-Black_Right.jpg'
+  ,'TRK 702 X': 'https://images5.1000ps.net/images_bikekat/2026/49-Benelli/11403-TRK_702_X/003-639034795364744320-benelli-trk-702-x.jpg?bgcolor=rgba_39_42_44_0&format=webp&height=1116&mode=pad&quality=80&scale=both&width=1984'
 };
 const verifiedModels = Object.keys(verifiedImages);
 let activeBrand = 'All Brands';
