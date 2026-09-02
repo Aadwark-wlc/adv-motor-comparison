@@ -89,6 +89,7 @@ const dockTitle = document.querySelector('#dockTitle');
 const dockText = document.querySelector('#dockText');
 const dockBikes = document.querySelector('#dockBikes');
 const comparisonModal = document.querySelector('#comparisonModal');
+const detailModal = document.querySelector('#detailModal');
 
 function brandIcon(brand) {
   if (brand === 'All Brands') return 'ALL';
@@ -122,7 +123,7 @@ function renderBikes() {
   resultCount.innerHTML = `${label} <span>${bikes.length}</span>`;
   grid.innerHTML = bikes.length ? bikes.map(bike => {
     const checked = selected.includes(bike.model);
-    return `<article class="motor-card ${checked ? 'selected' : ''}">
+    return `<article class="motor-card ${checked ? 'selected' : ''}" data-details="${bike.model}" tabindex="0" role="button" aria-label="View details for ${bike.brand} ${bike.model}">
       <div class="card-top"><span class="model-kind">${bike.type.toUpperCase()}</span><button class="compare-toggle" type="button" data-model="${bike.model}" aria-pressed="${checked}"><span class="checkmark">${checked ? '✓' : ''}</span>COMPARE</button></div>
       <img class="bike-image" src="${modelImage(bike)}" alt="${bike.brand} ${bike.model}" loading="lazy" />
       <p class="bike-brand">${bike.brand.toUpperCase()}</p><h2 class="bike-name">${bike.model}</h2>
@@ -166,14 +167,36 @@ function openComparison() {
   document.querySelector('#comparisonContent').innerHTML = content;
   comparisonModal.showModal();
 }
+function openBikeDetails(model) {
+  const bike = motorcycles.find(item => item.model === model);
+  if (!bike) return;
+  document.querySelector('#detailContent').innerHTML = `<div class="detail-hero">
+    <img class="detail-image" src="${modelImage(bike)}" alt="${bike.brand} ${bike.model}" />
+    <div class="detail-title"><p class="bike-brand">${bike.brand.toUpperCase()}</p><h3>${bike.model}</h3><p>${bike.type}</p></div>
+  </div>
+  <div class="detail-specs">
+    <div><span>ENGINE</span><strong>${bike.engine}</strong></div>
+    <div><span>POWER</span><strong>${bike.power} hp</strong></div>
+    <div><span>TORQUE</span><strong>${bike.torque} Nm</strong></div>
+    <div><span>WET WEIGHT</span><strong>${bike.weight} kg</strong></div>
+    <div><span>SEAT HEIGHT</span><strong>${bike.seat} mm</strong></div>
+    <div><span>FUEL CAPACITY</span><strong>${bike.tank} L</strong></div>
+    <div><span>EST. EU PRICE</span><strong>${priceRange(bike.price)}</strong></div>
+  </div>
+  <p class="detail-note">Indicative European price range only. Final pricing varies by country, taxes, packages and dealer.</p>`;
+  detailModal.showModal();
+}
 
 filters.addEventListener('click', event => { const button = event.target.closest('[data-brand]'); if (!button) return; activeBrand = button.dataset.brand; renderFilters(); renderBikes(); });
-grid.addEventListener('click', event => { const button = event.target.closest('[data-model]'); if (button) toggleBike(button.dataset.model); });
+grid.addEventListener('click', event => { const button = event.target.closest('[data-model]'); if (button) { toggleBike(button.dataset.model); return; } const card = event.target.closest('[data-details]'); if (card) openBikeDetails(card.dataset.details); });
+grid.addEventListener('keydown', event => { if ((event.key === 'Enter' || event.key === ' ') && event.target.matches('[data-details]')) { event.preventDefault(); openBikeDetails(event.target.dataset.details); } });
 document.querySelector('#sortSelect').addEventListener('change', event => { activeSort = event.target.value; renderBikes(); });
 document.querySelector('#clearSelection').addEventListener('click', () => { selected = []; renderBikes(); updateDock(); });
 document.querySelector('#openComparison').addEventListener('click', openComparison);
 document.querySelector('#navCompare').addEventListener('click', () => { if (selected.length >= 2) openComparison(); else document.querySelector('.explorer').scrollIntoView({ behavior: 'smooth' }); });
 document.querySelector('#closeComparison').addEventListener('click', () => comparisonModal.close());
 comparisonModal.addEventListener('click', event => { if (event.target === comparisonModal) comparisonModal.close(); });
+document.querySelector('#closeDetails').addEventListener('click', () => detailModal.close());
+detailModal.addEventListener('click', event => { if (event.target === detailModal) detailModal.close(); });
 document.querySelector('.hero-note span').textContent = String(motorcycles.length).padStart(2, '0');
 renderFilters(); renderBikes(); updateDock();

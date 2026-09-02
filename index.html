@@ -9,6 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .motor-card:focus-visible { z-index: 3; outline: 3px solid var(--acid); outline-offset: -3px; }
+      .detail-wrap { padding: 0 38px 36px; }
+      .detail-hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(230px, .65fr); align-items: end; gap: 30px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+      .detail-image { width: 100%; height: 270px; object-fit: cover; mix-blend-mode: multiply; }
+      .detail-title { padding-bottom: 18px; }
+      .detail-title h3 { margin: 4px 0 10px; font-size: clamp(32px, 4vw, 54px); line-height: .92; letter-spacing: -.075em; }
+      .detail-title > p:last-child, .detail-note { color: var(--muted); font-family: 'DM Mono'; font-size: 9px; letter-spacing: .08em; }
+      .detail-title > p:last-child { margin: 0; }
+      .detail-specs { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 26px; border-top: 1px solid var(--line); }
+      .detail-specs div { min-height: 92px; padding: 17px 14px 15px 0; border-bottom: 1px solid var(--line); }
+      .detail-specs span { display: block; margin-bottom: 7px; color: var(--muted); font-family: 'DM Mono'; font-size: 9px; letter-spacing: .07em; }
+      .detail-specs strong { font-size: 14px; line-height: 1.25; }
+      .detail-note { margin: 18px 0 0; line-height: 1.6; }
+      @media (max-width: 540px) { .detail-wrap { padding: 22px; } .detail-hero { grid-template-columns: 1fr; gap: 5px; } .detail-image { height: 205px; } .detail-specs { grid-template-columns: repeat(2, 1fr); } .detail-specs div { min-height: 82px; } }
+    </style>
   </head>
   <body>
     <main>
@@ -66,6 +82,14 @@
         <button class="close-button" id="closeComparison" type="button" aria-label="Close comparison">×</button>
       </div>
       <div class="comparison-wrap" id="comparisonContent"></div>
+    </dialog>
+
+    <dialog class="comparison-modal detail-modal" id="detailModal">
+      <div class="modal-header">
+        <div><p class="eyebrow">MODEL FILE</p><h2>Machine details</h2></div>
+        <button class="close-button" id="closeDetails" type="button" aria-label="Close motorcycle details">×</button>
+      </div>
+      <div class="detail-wrap" id="detailContent"></div>
     </dialog>
 
     <template id="emptyTemplate">
