@@ -29,6 +29,8 @@
       .technical-row strong { font-size: 13px; line-height: 1.45; font-weight: 600; }
       .detail-note { margin: 18px 0 0; line-height: 1.6; }
       .official-source { display: inline-flex; gap: 11px; margin-top: 18px; color: var(--ink); font-family: 'DM Mono'; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-underline-offset: 4px; }
+      .brand-filters { display: grid; grid-template-columns: repeat(9, max-content); }
+      @media (max-width: 1100px) { .filter-row { align-items: flex-start; flex-direction: column; } .brand-filters { grid-template-columns: repeat(6, max-content); } }
       @media (max-width: 540px) { .detail-wrap { padding: 22px; } .detail-hero { grid-template-columns: 1fr; gap: 5px; } .detail-image { height: 205px; } .technical-section { grid-template-columns: 1fr; gap: 18px; } .technical-section h4 { font-size: 20px; } .technical-row { grid-template-columns: 1fr; gap: 6px; } }
     </style>
   </head>
