@@ -123,7 +123,7 @@ const officialSpecs = {
   ,'450MT': { chassis: 'Steel trellis frame with aluminium swingarm; 21/18-inch spoked wheels.', suspension: 'Long-travel KYB USD fork / KYB monoshock; adjustable damping and preload.', dimensions: 'Seat height 820 mm · 17.5 L tank · kerb weight 196 kg.', source: 'https://www.cfmoto.com/global/motorcycles/mult-touring/450mt.html' }
 };
 let activeBrand = 'All Brands';
-let activeSort = 'featured';
+let activeSort = 'brand';
 let selected = [];
 const grid = document.querySelector('#motorGrid');
 const filters = document.querySelector('#brandFilters');
@@ -154,6 +154,7 @@ function priceRange(value) {
 }
 function filteredBikes() {
   const list = activeBrand === 'All Brands' ? [...motorcycles] : motorcycles.filter(bike => bike.brand === activeBrand);
+  if (activeSort === 'brand') list.sort((a,b) => a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model));
   if (activeSort === 'power') list.sort((a,b) => b.power - a.power);
   if (activeSort === 'weight') list.sort((a,b) => a.weight - b.weight);
   if (activeSort === 'price') list.sort((a,b) => a.price - b.price);
