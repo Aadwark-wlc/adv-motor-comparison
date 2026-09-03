@@ -216,24 +216,31 @@ function openBikeDetails(model) {
   const bike = motorcycles.find(item => item.model === model);
   const spec = officialSpecs[model];
   if (!bike) return;
+  const rows = entries => entries.map(([label, value]) => `<div class="technical-row"><span>${label}</span><strong>${value}</strong></div>`).join('');
+  const technicalSections = spec ? `<section class="technical-sheet"><p class="eyebrow">TECHNICAL DATA</p>
+    <div class="technical-section"><h4>Engine &amp;<br>Performance</h4><div class="technical-rows">${rows([
+      ['Engine', bike.engine],
+      ['Maximum power', `${bike.power} hp`],
+      ['Maximum torque', `${bike.torque} Nm`]
+    ])}</div></div>
+    <div class="technical-section"><h4>Chassis &amp;<br>Suspension</h4><div class="technical-rows">${rows([
+      ['Chassis', spec.chassis],
+      ['Suspension', spec.suspension]
+    ])}</div></div>
+    <div class="technical-section"><h4>Dimensions &amp;<br>Capacity</h4><div class="technical-rows">${rows([
+      ['Dimensions', spec.dimensions],
+      ['Wet weight', `${bike.weight} kg`],
+      ['Seat height', `${bike.seat} mm`],
+      ['Fuel capacity', `${bike.tank} L`]
+    ])}</div></div>
+  </section>` : '';
   document.querySelector('#detailContent').innerHTML = `<div class="detail-hero">
     <img class="detail-image" src="${modelImage(bike)}" alt="${bike.brand} ${bike.model}" />
     <div class="detail-title"><p class="bike-brand">${bike.brand.toUpperCase()}</p><h3>${bike.model}</h3><p>${bike.type}</p></div>
   </div>
-  <div class="detail-specs">
-    <div><span>ENGINE</span><strong>${bike.engine}</strong></div>
-    <div><span>POWER</span><strong>${bike.power} hp</strong></div>
-    <div><span>TORQUE</span><strong>${bike.torque} Nm</strong></div>
-    <div><span>WET WEIGHT</span><strong>${bike.weight} kg</strong></div>
-    <div><span>SEAT HEIGHT</span><strong>${bike.seat} mm</strong></div>
-    <div><span>FUEL CAPACITY</span><strong>${bike.tank} L</strong></div>
-    <div><span>EST. EU PRICE</span><strong>${priceRange(bike.price)}</strong></div>
-    ${spec ? `<div><span>CHASSIS</span><strong>${spec.chassis}</strong></div>
-    <div><span>SUSPENSION</span><strong>${spec.suspension}</strong></div>
-    <div><span>DIMENSIONS</span><strong>${spec.dimensions}</strong></div>` : ''}
-  </div>
-  ${spec ? `<a class="official-source" href="${spec.source}" target="_blank" rel="noopener noreferrer">VIEW OFFICIAL MANUFACTURER SOURCE <span>↗</span></a>` : ''}
-  <p class="detail-note">Chassis, suspension and dimensions are taken from the linked manufacturer source. Indicative European price range only; final pricing varies by country, taxes, packages and dealer.</p>`;
+  ${technicalSections}
+  <p class="detail-note">Indicative European price range: <strong>${priceRange(bike.price)}</strong>. Final pricing varies by country, taxes, packages and dealer.</p>
+  ${spec ? `<a class="official-source" href="${spec.source}" target="_blank" rel="noopener noreferrer">VIEW OFFICIAL MANUFACTURER SOURCE <span>↗</span></a>` : ''}`;
   detailModal.showModal();
 }
 

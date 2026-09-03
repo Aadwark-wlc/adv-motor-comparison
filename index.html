@@ -19,13 +19,17 @@
       .detail-title h3 { margin: 4px 0 10px; font-size: clamp(32px, 4vw, 54px); line-height: .92; letter-spacing: -.075em; }
       .detail-title > p:last-child, .detail-note { color: var(--muted); font-family: 'DM Mono'; font-size: 9px; letter-spacing: .08em; }
       .detail-title > p:last-child { margin: 0; }
-      .detail-specs { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 26px; border-top: 1px solid var(--line); }
-      .detail-specs div { min-height: 92px; padding: 17px 14px 15px 0; border-bottom: 1px solid var(--line); }
-      .detail-specs span { display: block; margin-bottom: 7px; color: var(--muted); font-family: 'DM Mono'; font-size: 9px; letter-spacing: .07em; }
-      .detail-specs strong { font-size: 14px; line-height: 1.25; }
+      .technical-sheet { margin-top: 30px; }
+      .technical-sheet > .eyebrow { margin: 0 0 18px; color: var(--muted); }
+      .technical-section { display: grid; grid-template-columns: minmax(150px, .32fr) 1fr; gap: 36px; padding: 26px 0; border-top: 1px solid var(--ink); }
+      .technical-section h4 { margin: 0; font-size: 22px; line-height: 1; letter-spacing: -.045em; }
+      .technical-rows { border-top: 1px solid var(--line); }
+      .technical-row { display: grid; grid-template-columns: minmax(150px, .38fr) 1fr; gap: 24px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+      .technical-row span { font-family: 'DM Mono'; font-size: 9px; font-weight: 700; letter-spacing: .045em; text-transform: uppercase; }
+      .technical-row strong { font-size: 13px; line-height: 1.45; font-weight: 600; }
       .detail-note { margin: 18px 0 0; line-height: 1.6; }
       .official-source { display: inline-flex; gap: 11px; margin-top: 18px; color: var(--ink); font-family: 'DM Mono'; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-underline-offset: 4px; }
-      @media (max-width: 540px) { .detail-wrap { padding: 22px; } .detail-hero { grid-template-columns: 1fr; gap: 5px; } .detail-image { height: 205px; } .detail-specs { grid-template-columns: repeat(2, 1fr); } .detail-specs div { min-height: 82px; } }
+      @media (max-width: 540px) { .detail-wrap { padding: 22px; } .detail-hero { grid-template-columns: 1fr; gap: 5px; } .detail-image { height: 205px; } .technical-section { grid-template-columns: 1fr; gap: 18px; } .technical-section h4 { font-size: 20px; } .technical-row { grid-template-columns: 1fr; gap: 6px; } }
     </style>
   </head>
   <body>
